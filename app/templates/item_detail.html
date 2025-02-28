@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto py-8">
+    <h1 class="text-2xl font-bold mb-4">{{ item.name }}</h1>
+    <p>{{ item.description }}</p>
+    <div class="mt-6 space-y-4">
+        <a href="{% url 'item_attributes_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Attributes</a>
+        <a href="{% url 'item_classification_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Classification</a>
+        <a href="{% url 'item_location_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Location</a>
+        <a href="{% url 'item_tax_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Tax</a>
+        <a href="{% url 'item_reorder_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Reorder</a>
+        <a href="{% url 'item_manufacturing_create' item.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Add Manufacturing</a>
+    </div>
+</div>
+{% endblock %}

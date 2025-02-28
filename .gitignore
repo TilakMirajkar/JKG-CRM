@@ -1,0 +1,8 @@
+/env
+.env
+app/__pycache__/
+app/migrations/
+db.sqlite3
+/static
+/media
+crm/__pycache__/
